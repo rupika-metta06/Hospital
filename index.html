@@ -1,0 +1,937 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><title>CarePlus Hospital Management System</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head><body><!-- Navigation Bar -->
+
+<nav class="navbar">
+
+    <div class="logo">
+        <span class="logo-icon">✚</span>
+        <div>
+            <h1>CarePlus Hospital</h1>
+            <p>Hospital Management System</p>
+        </div>
+    </div>
+
+    <div class="nav-links">
+
+        <a href="#dashboard">Dashboard</a>
+        <a href="#patients">Patients</a>
+        <a href="#doctors">Doctors</a>
+        <a href="#appointments">Appointments</a>
+        <a href="#about">About</a>
+
+    </div>
+
+</nav>
+
+
+<!-- Welcome Section -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <p class="small-title">
+            SMART HEALTHCARE MANAGEMENT
+        </p>
+
+        <h2>
+            Better Care Starts With
+            <span>Better Management</span>
+        </h2>
+
+        <p>
+            Manage patient records, doctors, appointments,
+            and hospital information in one simple system.
+        </p>
+
+        <a href="#patients" class="hero-button">
+            Register a Patient
+        </a>
+
+    </div>
+
+    <div class="hero-box">
+
+        <div class="hospital-symbol">
+            ✚
+        </div>
+
+        <h3>24/7 Healthcare</h3>
+
+        <p>
+            Caring for patients with safety,
+            comfort, and quality treatment.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- Dashboard -->
+
+<section id="dashboard" class="section">
+
+    <div class="section-heading">
+
+        <p>DASHBOARD</p>
+
+        <h2>
+            Hospital Overview
+        </h2>
+
+    </div>
+
+
+    <div class="statistics">
+
+        <div class="stat-card">
+
+            <div class="stat-icon blue">
+                👥
+            </div>
+
+            <div>
+                <h3 id="totalPatients">
+                    0
+                </h3>
+
+                <p>
+                    Total Patients
+                </p>
+            </div>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <div class="stat-icon green">
+                ✓
+            </div>
+
+            <div>
+                <h3 id="activePatients">
+                    0
+                </h3>
+
+                <p>
+                    Active Patients
+                </p>
+            </div>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <div class="stat-icon orange">
+                📅
+            </div>
+
+            <div>
+                <h3 id="totalAppointments">
+                    0
+                </h3>
+
+                <p>
+                    Appointments
+                </p>
+            </div>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <div class="stat-icon purple">
+                🩺
+            </div>
+
+            <div>
+                <h3 id="totalDoctors">
+                    6
+                </h3>
+
+                <p>
+                    Available Doctors
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="dashboard-grid">
+
+
+        <div class="dashboard-card">
+
+            <h3>
+                Recent Patients
+            </h3>
+
+            <div id="recentPatients">
+
+                <p class="no-data">
+                    No patients registered yet.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="dashboard-card">
+
+            <h3>
+                Quick Information
+            </h3>
+
+            <div class="information">
+
+                <div>
+                    <strong>
+                        Emergency:
+                    </strong>
+
+                    <span>
+                        108
+                    </span>
+                </div>
+
+                <div>
+                    <strong>
+                        Working Hours:
+                    </strong>
+
+                    <span>
+                        24 Hours
+                    </span>
+                </div>
+
+                <div>
+                    <strong>
+                        Hospital Status:
+                    </strong>
+
+                    <span class="open-status">
+                        Open
+                    </span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- Patient Registration -->
+
+<section id="patients" class="section light-section">
+
+    <div class="section-heading">
+
+        <p>PATIENT MODULE</p>
+
+        <h2>
+            Patient Registration
+        </h2>
+
+    </div>
+
+
+    <div class="form-container">
+
+        <form id="patientForm">
+
+            <div class="form-grid">
+
+
+                <div class="input-group">
+
+                    <label>
+                        Patient Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="patientName"
+                        placeholder="Enter patient name"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label>
+                        Age
+                    </label>
+
+                    <input
+                        type="number"
+                        id="patientAge"
+                        placeholder="Enter age"
+                        min="1"
+                        max="120"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label>
+                        Gender
+                    </label>
+
+                    <select
+                        id="patientGender"
+                        required
+                    >
+
+                        <option value="">
+                            Select gender
+                        </option>
+
+                        <option>
+                            Female
+                        </option>
+
+                        <option>
+                            Male
+                        </option>
+
+                        <option>
+                            Other
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label>
+                        Phone Number
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="patientPhone"
+                        placeholder="Enter phone number"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label>
+                        Disease / Problem
+                    </label>
+
+                    <input
+                        type="text"
+                        id="patientDisease"
+                        placeholder="Enter health problem"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label>
+                        Blood Group
+                    </label>
+
+                    <select id="bloodGroup">
+
+                        <option value="">
+                            Select blood group
+                        </option>
+
+                        <option>
+                            A+
+                        </option>
+
+                        <option>
+                            A-
+                        </option>
+
+                        <option>
+                            B+
+                        </option>
+
+                        <option>
+                            B-
+                        </option>
+
+                        <option>
+                            AB+
+                        </option>
+
+                        <option>
+                            AB-
+                        </option>
+
+                        <option>
+                            O+
+                        </option>
+
+                        <option>
+                            O-
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label>
+                        Doctor
+                    </label>
+
+                    <select
+                        id="patientDoctor"
+                        required
+                    >
+
+                        <option value="">
+                            Select doctor
+                        </option>
+
+                        <option>
+                            Dr. Anjali - Cardiology
+                        </option>
+
+                        <option>
+                            Dr. Ravi - Neurology
+                        </option>
+
+                        <option>
+                            Dr. Priya - Pediatrics
+                        </option>
+
+                        <option>
+                            Dr. Kiran - Orthopedics
+                        </option>
+
+                        <option>
+                            Dr. Meena - Dermatology
+                        </option>
+
+                        <option>
+                            Dr. Arjun - General Medicine
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label>
+                        Patient Status
+                    </label>
+
+                    <select id="patientStatus">
+
+                        <option>
+                            Active
+                        </option>
+
+                        <option>
+                            Admitted
+                        </option>
+
+                        <option>
+                            Discharged
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <button
+                type="submit"
+                class="main-button"
+            >
+
+                Register Patient
+
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+
+<!-- Patient Records -->
+
+<section class="section">
+
+    <div class="section-heading">
+
+        <p>PATIENT RECORDS</p>
+
+        <h2>
+            Manage Patient Details
+        </h2>
+
+    </div>
+
+
+    <div class="search-area">
+
+        <input
+            type="text"
+            id="searchPatient"
+            placeholder="Search by patient name..."
+        >
+
+        <select id="statusFilter">
+
+            <option value="All">
+                All Status
+            </option>
+
+            <option value="Active">
+                Active
+            </option>
+
+            <option value="Admitted">
+                Admitted
+            </option>
+
+            <option value="Discharged">
+                Discharged
+            </option>
+
+        </select>
+
+    </div>
+
+
+    <div class="table-container">
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>ID</th>
+
+                    <th>Name</th>
+
+                    <th>Age</th>
+
+                    <th>Gender</th>
+
+                    <th>Problem</th>
+
+                    <th>Doctor</th>
+
+                    <th>Status</th>
+
+                    <th>Action</th>
+
+                </tr>
+
+            </thead>
+
+
+            <tbody id="patientTable">
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</section>
+
+
+<!-- Doctors -->
+
+<section
+    id="doctors"
+    class="section light-section"
+>
+
+    <div class="section-heading">
+
+        <p>DOCTOR MODULE</p>
+
+        <h2>
+            Our Doctors
+        </h2>
+
+    </div>
+
+
+    <div class="doctor-grid">
+
+
+        <div class="doctor-card">
+
+            <div class="doctor-image">
+                👩‍⚕️
+            </div>
+
+            <h3>
+                Dr. Anjali
+            </h3>
+
+            <p>
+                Cardiology
+            </p>
+
+            <span>
+                10 Years Experience
+            </span>
+
+        </div>
+
+
+        <div class="doctor-card">
+
+            <div class="doctor-image">
+                👨‍⚕️
+            </div>
+
+            <h3>
+                Dr. Ravi
+            </h3>
+
+            <p>
+                Neurology
+            </p>
+
+            <span>
+                12 Years Experience
+            </span>
+
+        </div>
+
+
+        <div class="doctor-card">
+
+            <div class="doctor-image">
+                👩‍⚕️
+            </div>
+
+            <h3>
+                Dr. Priya
+            </h3>
+
+            <p>
+                Pediatrics
+            </p>
+
+            <span>
+                8 Years Experience
+            </span>
+
+        </div>
+
+
+        <div class="doctor-card">
+
+            <div class="doctor-image">
+                👨‍⚕️
+            </div>
+
+            <h3>
+                Dr. Kiran
+            </h3>
+
+            <p>
+                Orthopedics
+            </p>
+
+            <span>
+                9 Years Experience
+            </span>
+
+        </div>
+
+
+        <div class="doctor-card">
+
+            <div class="doctor-image">
+                👩‍⚕️
+            </div>
+
+            <h3>
+                Dr. Meena
+            </h3>
+
+            <p>
+                Dermatology
+            </p>
+
+            <span>
+                7 Years Experience
+            </span>
+
+        </div>
+
+
+        <div class="doctor-card">
+
+            <div class="doctor-image">
+                👨‍⚕️
+            </div>
+
+            <h3>
+                Dr. Arjun
+            </h3>
+
+            <p>
+                General Medicine
+            </p>
+
+            <span>
+                11 Years Experience
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- Appointment Module -->
+
+<section
+    id="appointments"
+    class="section"
+>
+
+    <div class="section-heading">
+
+        <p>APPOINTMENT MODULE</p>
+
+        <h2>
+            Book an Appointment
+        </h2>
+
+    </div>
+
+
+    <div class="appointment-layout">
+
+
+        <div class="form-container">
+
+            <form id="appointmentForm">
+
+                <div class="input-group">
+
+                    <label>
+                        Patient Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="appointmentName"
+                        placeholder="Enter patient name"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label>
+                        Select Doctor
+                    </label>
+
+                    <select
+                        id="appointmentDoctor"
+                        required
+                    >
+
+                        <option value="">
+                            Select doctor
+                        </option>
+
+                        <option>
+                            Dr. Anjali - Cardiology
+                        </option>
+
+                        <option>
+                            Dr. Ravi - Neurology
+                        </option>
+
+                        <option>
+                            Dr. Priya - Pediatrics
+                        </option>
+
+                        <option>
+                            Dr. Kiran - Orthopedics
+                        </option>
+
+                        <option>
+                            Dr. Meena - Dermatology
+                        </option>
+
+                        <option>
+                            Dr. Arjun - General Medicine
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label>
+                        Appointment Date
+                    </label>
+
+                    <input
+                        type="date"
+                        id="appointmentDate"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label>
+                        Appointment Time
+                    </label>
+
+                    <input
+                        type="time"
+                        id="appointmentTime"
+                        required
+                    >
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="main-button"
+                >
+
+                    Book Appointment
+
+                </button>
+
+            </form>
+
+        </div>
+
+
+        <div class="appointment-list">
+
+            <h3>
+                Scheduled Appointments
+            </h3>
+
+            <div id="appointmentRecords">
+
+                <p class="no-data">
+
+                    No appointments booked yet.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- About -->
+
+<section
+    id="about"
+    class="about-section"
+>
+
+    <div>
+
+        <p>
+            ABOUT THE PROJECT
+        </p>
+
+        <h2>
+            Hospital Management System
+        </h2>
+
+        <p class="about-text">
+
+            This project is developed using
+            HTML, CSS, and JavaScript.
+            It helps manage patient information,
+            doctor details, appointments,
+            hospital records, and statistics
+            through a simple user interface.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- Footer -->
+
+<footer>
+
+    <h3>
+        ✚ CarePlus Hospital
+    </h3>
+
+    <p>
+        Smart Healthcare Management System
+    </p>
+
+    <p>
+        © 2026 All Rights Reserved
+    </p>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body></html>
